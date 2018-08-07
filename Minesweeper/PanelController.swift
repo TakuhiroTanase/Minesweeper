@@ -20,11 +20,12 @@ class PanelController{
         
         panel = [[Panel]](repeating: [Panel](repeating: Panel(), count: XY), count: XY)
         let size = 20.0
-        let posX = Double(UIScreen.main.bounds.width / 2) - (size * Double(XY))  / 2 - Double(XY) / 2 
+        let posX = Double(UIScreen.main.bounds.width / 2) - (size * Double(XY))  / 2 - Double(XY) / 2
+        let posY = Double(UIScreen.main.bounds.height / 2) - (size * Double(XY))  / 2 - Double(XY) / 2 - 75
         for x in 1...XY {
             for y in 1...XY {
                 let TestView = Panel()
-                TestView.Initialize(frame: CGRect.init(x: posX + (size + 1) * Double(x-2), y: Double(156 +
+                TestView.Initialize(frame: CGRect.init(x: posX + (size + 1) * Double(x-2), y: Double(posY +
                     (size + 1 ) * Double(y-2)), width: size, height: size),x:x-1,y:y-1)
                 let bgColor = UIColor.lightGray
                 TestView.backgroundColor = bgColor
