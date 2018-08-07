@@ -29,6 +29,8 @@ class Panel: UIButton {
         
     }
     @objc func buttonEvent(_ sender: UIButton) {
+        if gameover
+        { return }
         if flag && !check {
             lock = !lock
             self.setTitle( lock ? "◯" : "", for:.normal)

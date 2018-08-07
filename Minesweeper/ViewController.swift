@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var bomNum: UITextField!
     @IBOutlet weak var bomCountLabel: UILabel!
-    @IBOutlet weak var gameEnd: UILabel!
+    @IBOutlet weak var gameEnd: UIButton!
 
     var panel = PanelController()
     var bom = 0
@@ -33,12 +33,12 @@ class ViewController: UIViewController {
             }
             if panelCount == 0
             {
-                self.gameEnd.text = "GameClear"
+                self.gameEnd.setTitle("GameClear", for: .normal)
                 self.gameEnd.isHidden = false
             }
             if gameover
             {
-                self.gameEnd.text = "GameOver"
+                self.gameEnd.setTitle("GameOver", for: .normal)
                 self.gameEnd.isHidden = false
             }
         })
