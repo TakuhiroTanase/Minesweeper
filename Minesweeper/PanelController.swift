@@ -19,7 +19,7 @@ class PanelController{
     func Initialize(view:UIView,XY:Int,bom:Int) {
         
         panel = [[Panel]](repeating: [Panel](repeating: Panel(), count: XY), count: XY)
-        let size = 20.0
+        let size = 30.0
         let posX = Double(UIScreen.main.bounds.width / 2) - (size * Double(XY))  / 2 - Double(XY) / 2
         let posY = Double(UIScreen.main.bounds.height / 2) - (size * Double(XY))  / 2 - Double(XY) / 2 - 75
         for x in 1...XY {

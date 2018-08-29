@@ -39,6 +39,14 @@ class ViewController: UIViewController {
             if gameover
             {
                 self.gameEnd.setTitle("GameOver", for: .normal)
+                for x in self.panel.panel {
+                    for y in x {
+                        if y.bom {
+                            y.setTitle("×", for:.normal)
+                            y.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+                        }
+                    }
+                }
                 self.gameEnd.isHidden = false
             }
         })
@@ -47,9 +55,11 @@ class ViewController: UIViewController {
         self.gameEnd.isHidden = true
         gameover = false
         bom = Int(bomNum.text!)!
-        panel.Initialize(view: self.view,XY: 10,bom:Int(bomNum.text!)!)
-        bomCount = Int(bomNum.text!)!
-        bomCountLabel.text = bomNum.text
+        bom = bom >= 100 ?99:bom
+        panel.Initialize(view: self.view,XY: 10,bom:bom)
+        
+        bomCount = Int(bom)
+        bomCountLabel.text = "\(bom)"
         
         self.view.bringSubviewToFront(gameEnd)
     }
