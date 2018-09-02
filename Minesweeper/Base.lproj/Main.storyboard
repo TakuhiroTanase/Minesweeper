@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
                                         <rect key="frame" x="238.5" y="22" width="57" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="57" id="ZFv-r6-MCs"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="ZFv-r6-MCs"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -44,7 +45,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="爆弾の数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljV-gD-iJU">
                                         <rect key="frame" x="0.0" y="22" width="103" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="103" id="38f-vl-jIx"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="38f-vl-jIx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -83,6 +84,7 @@
                                     <constraint firstItem="6fM-nZ-KHU" firstAttribute="leading" secondItem="aI7-e8-PlY" secondAttribute="trailing" constant="9" id="QA9-ms-mcA"/>
                                     <constraint firstItem="6fM-nZ-KHU" firstAttribute="leading" secondItem="ljV-gD-iJU" secondAttribute="trailing" constant="41.5" id="SJV-uP-iO2"/>
                                     <constraint firstItem="ljV-gD-iJU" firstAttribute="leading" secondItem="edE-2R-yhP" secondAttribute="leading" id="SbZ-Un-aYq"/>
+                                    <constraint firstItem="aI7-e8-PlY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="edE-2R-yhP" secondAttribute="leading" constant="20" symbolic="YES" id="XKo-IY-vq9"/>
                                     <constraint firstItem="ljV-gD-iJU" firstAttribute="centerY" secondItem="6fM-nZ-KHU" secondAttribute="centerY" id="zrU-2F-YiO"/>
                                 </constraints>
                             </view>

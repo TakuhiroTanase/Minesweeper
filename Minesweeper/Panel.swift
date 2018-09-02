@@ -25,7 +25,7 @@ class Panel: UIButton {
         self.frame = frame
         self.x = x
         self.y = y
-        self.addTarget(self, action: #selector(buttonEvent(_:)), for: UIControl.Event.touchUpInside)
+        self.addTarget(self, action: #selector(buttonEvent(_:)), for:.touchUpInside)
         
     }
     @objc func buttonEvent(_ sender: UIButton) {

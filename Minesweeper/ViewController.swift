@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         bomCount = Int(bom)
         bomCountLabel.text = "\(bom)"
         
-        self.view.bringSubviewToFront(gameEnd)
+        self.view.bringSubview(toFront: gameEnd)
     }
     
     override func didReceiveMemoryWarning() {
