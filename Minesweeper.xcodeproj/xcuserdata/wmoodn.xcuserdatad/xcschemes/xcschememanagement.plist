@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Minesweeper.xcscheme</key>
+		<key>Minesweeper.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>MinesweeperTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>82D1523D21095A510099CC6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82D1525121095A520099CC6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82D1525C21095A520099CC6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

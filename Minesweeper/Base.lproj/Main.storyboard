@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USG-gB-dib">
+                                <rect key="frame" x="0.0" y="212" width="375" height="93"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="Yzt-JX-Bqh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="76"/>
+                                <state key="normal" title="GameOver">
+                                    <color key="titleColor" red="0.84101364209999996" green="0.2034914779" blue="0.108718219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="Reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWP-Ix-OIc"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edE-2R-yhP">
-                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="561" width="375" height="106"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fM-nZ-KHU">
                                         <rect key="frame" x="144.5" y="22" width="86" height="31"/>
@@ -37,7 +51,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="ZFv-r6-MCs"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="作成"/>
                                         <connections>
                                             <action selector="Reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VPd-OJ-74m"/>
                                         </connections>
@@ -70,14 +84,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRY-LM-GgV">
+                                        <rect key="frame" x="144" y="61" width="87" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="i6j-Q3-c1u" firstAttribute="leading" secondItem="6fM-nZ-KHU" secondAttribute="trailing" constant="8" symbolic="YES" id="5gM-mI-flF"/>
-                                    <constraint firstItem="ljV-gD-iJU" firstAttribute="centerY" secondItem="edE-2R-yhP" secondAttribute="centerY" id="5w8-3d-nrT"/>
+                                    <constraint firstItem="ljV-gD-iJU" firstAttribute="centerY" secondItem="edE-2R-yhP" secondAttribute="centerY" constant="-15.5" id="5w8-3d-nrT"/>
                                     <constraint firstItem="i6j-Q3-c1u" firstAttribute="top" secondItem="ljV-gD-iJU" secondAttribute="top" id="6cG-tn-Ahv"/>
                                     <constraint firstItem="kJt-Qx-2UE" firstAttribute="leading" secondItem="i6j-Q3-c1u" secondAttribute="trailing" constant="24" id="JNO-NX-JTf"/>
-                                    <constraint firstAttribute="height" constant="75" id="L0s-0B-cfV"/>
+                                    <constraint firstAttribute="height" constant="106" id="L0s-0B-cfV"/>
                                     <constraint firstItem="aI7-e8-PlY" firstAttribute="centerY" secondItem="ljV-gD-iJU" secondAttribute="centerY" id="NPp-ew-sNv"/>
                                     <constraint firstItem="ljV-gD-iJU" firstAttribute="top" secondItem="edE-2R-yhP" secondAttribute="top" constant="22" id="OMT-6b-Rrc"/>
                                     <constraint firstItem="kJt-Qx-2UE" firstAttribute="bottom" secondItem="6fM-nZ-KHU" secondAttribute="bottom" id="PYi-H8-FbK"/>
@@ -88,20 +109,6 @@
                                     <constraint firstItem="ljV-gD-iJU" firstAttribute="centerY" secondItem="6fM-nZ-KHU" secondAttribute="centerY" id="zrU-2F-YiO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USG-gB-dib">
-                                <rect key="frame" x="0.0" y="212" width="375" height="93"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="93" id="Yzt-JX-Bqh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="76"/>
-                                <state key="normal" title="GameOver">
-                                    <color key="titleColor" red="0.84101364209999996" green="0.2034914779" blue="0.108718219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="Reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWP-Ix-OIc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -119,6 +126,7 @@
                         <outlet property="bomNum" destination="6fM-nZ-KHU" id="HIP-9g-KaL"/>
                         <outlet property="button" destination="i6j-Q3-c1u" id="94y-T2-Dp6"/>
                         <outlet property="gameEnd" destination="USG-gB-dib" id="DhQ-oA-Zgo"/>
+                        <outlet property="stageSize" destination="zRY-LM-GgV" id="8ei-6d-eAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

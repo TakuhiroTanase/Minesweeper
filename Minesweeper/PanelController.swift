@@ -17,10 +17,14 @@ class PanelController{
     }
     
     func Initialize(view:UIView,XY:Int,bom:Int) {
-        
+        for p1 in panel {
+            for p in p1{
+                p.removeFromSuperview()
+            }
+        }
         panel = [[Panel]](repeating: [Panel](repeating: Panel(), count: XY), count: XY)
-        let size = 40.0
-        let posX = Double(UIScreen.main.bounds.width / 2) - (size * Double(XY))  / 2 + size
+        let size = Double(UIScreen.main.bounds.width-10) / Double(XY+2)
+        let posX = Double(UIScreen.main.bounds.width)/2 - (size * Double(XY))  / 2 + size
         let posY = Double(UIScreen.main.bounds.height / 2) - (size * Double(XY))  / 2 - Double(XY) / 2 - 75
         for x in 1...XY {
             for y in 1...XY {
