@@ -26,6 +26,7 @@ class ViewController: UIViewController,UIPickerViewDelegate ,UIPickerViewDataSou
     @IBOutlet weak var stageSize: UITextField!
     var panel = PanelController()
     var bom = 0
+    var size = 100
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,12 +48,13 @@ class ViewController: UIViewController,UIPickerViewDelegate ,UIPickerViewDataSou
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
             self.bomCountLabel.text = "\(bomCount)"
             
-            var panelCount = 100 - self.bom
+            var panelCount = self.size*self.size - self.bom
             for x in self.panel.panel {
                 for y in x {
                     panelCount -=  y.backgroundColor == UIColor.white ? 1:0;
                 }
             }
+            print(panelCount)
             if panelCount == 0
             {
                 self.gameEnd.setTitle("GameClear", for: .normal)
@@ -77,7 +79,7 @@ class ViewController: UIViewController,UIPickerViewDelegate ,UIPickerViewDataSou
         self.gameEnd.isHidden = true
         gameover = false
         bom = Int(bomNum.text!)!
-        var size = stageSize.text == "10X10" ?10:stageSize.text == "20X20" ?20:stageSize.text == "30X30" ?30:10
+        size = stageSize.text == "10X10" ?10:stageSize.text == "20X20" ?20:stageSize.text == "30X30" ?30:10
         bom = bom >= size*size ?size*size-1:bom
         panel.Initialize(view: self.view,XY: size,bom:bom)
         
